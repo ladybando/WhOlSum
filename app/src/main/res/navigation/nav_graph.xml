@@ -8,6 +8,11 @@
     <fragment
         android:id="@+id/mainLandingFragment"
         android:name="com.example.android.wholsum.ui.MainLandingFragment"
-        android:label="fragment_main_landing"
+        android:label="Welcome"
         tools:layout="@layout/fragment_main_landing" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.android.wholsum.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
