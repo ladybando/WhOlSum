@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:titleTextColor="@color/black"
+        android:logo="@drawable/wholesumoo"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintStart_toStartOf="parent"
