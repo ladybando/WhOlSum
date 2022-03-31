@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
+        setSupportActionBar(findViewById(R.id.wholsum_toolbar))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
