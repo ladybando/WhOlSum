@@ -2,4 +2,13 @@
     <string name="app_name">WholSum</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome to WhOlSum</string>
+    <string name="app_info">App Information</string>
+    <string name="additional_info">Additional Information</string>
+    <string name="logo">Logo</string>
+    <string name="action_settings">Settings</string>
+    <string name="search">search</string>
+    <string name="username">Enter username</string>
+    <string name="password">Enter password</string>
+    <string name="submit">Submit</string>
 </resources>

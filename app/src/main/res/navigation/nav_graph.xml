@@ -9,7 +9,11 @@
         android:id="@+id/mainLandingFragment"
         android:name="com.example.android.wholsum.ui.MainLandingFragment"
         android:label="Welcome"
-        tools:layout="@layout/fragment_main_landing" />
+        tools:layout="@layout/fragment_main_landing" >
+        <action
+            android:id="@+id/action_mainLandingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.android.wholsum.ui.LoginFragment"

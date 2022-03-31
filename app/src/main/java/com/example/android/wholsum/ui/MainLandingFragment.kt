@@ -11,7 +11,7 @@ import com.example.android.wholsum.R
 import com.example.android.wholsum.databinding.FragmentMainLandingBinding
 
 class MainLandingFragment : Fragment() {
-
+//TODO determine why this page does not display
     private var _binding: FragmentMainLandingBinding? = null
     private val binding get() = _binding!!
 
