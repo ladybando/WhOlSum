@@ -22,3 +22,5 @@ Thanks for images from:
   - Joel Muniz
 - Pexels
   - Adonyi Gabor
+  - Monicore
+  - Pixabay
