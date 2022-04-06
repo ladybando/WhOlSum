@@ -14,3 +14,10 @@ Relocating surplus wholsum nourishment to the needful
 ### Next Steps
 - Check back for more updates as the app progresses
 - Feel free to add issues and offer suggestions/upgrades
+
+Thanks for images from:
+- Unsplash
+  - Clay Leconey
+  - Jon Tyson
+  - Joel Muniz
+- Pexels
