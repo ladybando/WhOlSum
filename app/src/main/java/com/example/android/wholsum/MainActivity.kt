@@ -18,21 +18,19 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var searchView: SearchView
-//TODO change icon color on toolbar or revisit app theme colors
+//TODO toolbar not displaying; may need bottom navigation instead
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
-        setSupportActionBar(findViewById(R.id.wholsum_toolbar))
+        setSupportActionBar(findViewById(R.id.wholsum_bottom_navigation))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(findViewById(R.id.wholsum_toolbar))
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navHostFragment.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        binding.wholsumToolbar
-            .setupWithNavController(navController, appBarConfiguration)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.wholsumBottomNavigation
+            .setupWithNavController(navController)
 
     }
     override fun onSupportNavigateUp(): Boolean {

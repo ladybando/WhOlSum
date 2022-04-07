@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">WholSum</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome">Welcome to WhOlSum</string>
     <string name="app_info">App Information</string>
     <string name="additional_info">Additional Information</string>

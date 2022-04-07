@@ -28,6 +28,7 @@ class MainLandingFragment : Fragment() {
     }
 
     //TODO add image to top half of screen; potentially cover toolbar
+    //TODO add phrases to text views
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val imagePhotoList = listOf(R.drawable.cater, R.drawable.foodbank, R.drawable.restimages)
