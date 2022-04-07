@@ -62,4 +62,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wholsum_support_recyclerv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="800dp"
+        android:padding="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:listitem="@layout/landing_layout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
