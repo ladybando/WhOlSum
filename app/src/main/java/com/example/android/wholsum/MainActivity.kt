@@ -10,7 +10,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.android.wholsum.databinding.ActivityMainBinding
 
@@ -23,16 +22,16 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         super.onCreate(savedInstanceState)
     //setup bottom navigation as toplevel pic hid toolbar
-        setSupportActionBar(findViewById(R.id.wholsum_bottom_navigation))
+        setSupportActionBar(findViewById(R.id.wholsum_navigation))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navHostFragment.navController
+        val toolbar = binding.wholsumToolbar
         appBarConfiguration = AppBarConfiguration(navController.graph)
-        binding.wholsumBottomNavigation
-            .setupWithNavController(navController)
 
+        setSupportActionBar(toolbar)
     }
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragment_container)

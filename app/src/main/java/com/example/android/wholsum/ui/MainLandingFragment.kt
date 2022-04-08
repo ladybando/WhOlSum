@@ -27,10 +27,11 @@ class MainLandingFragment : Fragment() {
         return binding.root
     }
 
-    //TODO add image to top half of screen; potentially cover toolbar
+    //TODO remove label from toolbar
     //TODO add phrases to text views
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
         /* show images that are stored in drawable in horizontal recycler view
         * this set of images shows places that donate food*/
         val imagePhotoList = listOf(R.drawable.cater, R.drawable.foodbank, R.drawable.restimages)
