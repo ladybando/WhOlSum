@@ -40,7 +40,7 @@ class MainLandingFragment : Fragment() {
         recyclerView.layoutManager = horizontalLayoutManager
 
         val supportImagePhotoList =
-            listOf(R.drawable.mansitting, R.drawable.pasta, R.drawable.giving, R.drawable.tombasil)
+            listOf(R.drawable.mansitting, R.drawable.rollbread, R.drawable.giving, R.drawable.tombasil)
         val supportView = binding.wholsumSupportRecyclerv
         val supportAdapter = SupportRecyclerViewAdapter(supportImagePhotoList)
         supportView.adapter = supportAdapter
