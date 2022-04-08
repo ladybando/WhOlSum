@@ -18,10 +18,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var searchView: SearchView
-//TODO toolbar not displaying; may need bottom navigation instead
+//TODO update bottom nav bar to include fab
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
+    //setup bottom navigation as toplevel pic hid toolbar
         setSupportActionBar(findViewById(R.id.wholsum_bottom_navigation))
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

@@ -31,6 +31,8 @@ class MainLandingFragment : Fragment() {
     //TODO add phrases to text views
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        /* show images that are stored in drawable in horizontal recycler view
+        * this set of images shows places that donate food*/
         val imagePhotoList = listOf(R.drawable.cater, R.drawable.foodbank, R.drawable.restimages)
         val recyclerView = binding.wholsumRecyclerv
         val adapter = WholsumRecycleViewAdapter(imagePhotoList)
@@ -38,7 +40,8 @@ class MainLandingFragment : Fragment() {
         val horizontalLayoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.layoutManager = horizontalLayoutManager
-
+        /*show next set of images stored in drawable in another horizontal recycler view
+        * this set of images shows work done by app*/
         val supportImagePhotoList =
             listOf(R.drawable.mansitting, R.drawable.rollbread, R.drawable.giving, R.drawable.tombasil)
         val supportView = binding.wholsumSupportRecyclerv
