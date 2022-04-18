@@ -20,7 +20,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
-//TODO ensure firebase works
+    //TODO ensure firebase works
     //TODO add database to store username,password info
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +34,8 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
+        TODO("Fix error: Default FirebaseApp is not initialized in this process com.example.android.wholsum. Make sure to call FirebaseApp.initializeApp(Context) first.")
+        binding.submitButton.setOnClickListener { firebaseLogin() }
     }
     override fun onStart() {
         super.onStart()

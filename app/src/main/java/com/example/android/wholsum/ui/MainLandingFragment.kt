@@ -1,12 +1,12 @@
 package com.example.android.wholsum.ui
 
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.android.wholsum.R
 import com.example.android.wholsum.adapter.SupportRecyclerViewAdapter
@@ -27,7 +27,6 @@ class MainLandingFragment : Fragment() {
         return binding.root
     }
 
-    //TODO remove label from toolbar
     //TODO add phrases to text views
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -50,6 +49,23 @@ class MainLandingFragment : Fragment() {
         supportView.adapter = supportAdapter
         val supportLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         supportView.layoutManager = supportLayoutManager
+        onClick()
+    }
+    private fun onClick(){
+        binding.bottomAppBar.setNavigationOnClickListener{
 
+        }
+        binding.bottomAppBar.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId){
+                R.id.login -> {
+                    findNavController().navigate(R.id.action_mainLandingFragment_to_loginFragment)
+                    true
+                }
+                R.id.register -> {
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
