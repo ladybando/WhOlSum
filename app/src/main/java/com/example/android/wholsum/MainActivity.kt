@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.Window
 import android.widget.SearchView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
@@ -17,27 +18,32 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var searchView: SearchView
-//TODO update bottom nav bar to include fab
+
+    //TODO update bottom nav bar to include fab
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
-    //setup bottom navigation as toplevel pic hid toolbar
+        //setup bottom navigation as toplevel pic hid toolbar
         setSupportActionBar(findViewById(R.id.wholsum_navigation))
+        title = null
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navHostFragment.navController
         val toolbar = binding.wholsumToolbar
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
         setSupportActionBar(toolbar)
     }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.fragment_container)
         return navController.navigateUp()
                 || super.onSupportNavigateUp()
     }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         searchOptions(menu)

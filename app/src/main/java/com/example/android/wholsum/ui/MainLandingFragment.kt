@@ -50,5 +50,6 @@ class MainLandingFragment : Fragment() {
         supportView.adapter = supportAdapter
         val supportLayoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         supportView.layoutManager = supportLayoutManager
+
     }
 }
