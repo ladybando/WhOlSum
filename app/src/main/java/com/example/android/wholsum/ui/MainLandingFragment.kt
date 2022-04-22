@@ -62,6 +62,7 @@ class MainLandingFragment : Fragment() {
                     true
                 }
                 R.id.register -> {
+                    findNavController().navigate(R.id.action_mainLandingFragment_to_registrationFragment)
                     true
                 }
                 else -> false

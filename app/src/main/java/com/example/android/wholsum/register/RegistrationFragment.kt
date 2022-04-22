@@ -16,7 +16,7 @@ class RegistrationFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_registration, container, false)
     }
-
+//TODO add onclick listener to drawable https://stackoverflow.com/questions/33650575/click-listener-for-drawableleft-in-edittext-in-android
   /*
   fun showPassword(){
     showHideBtn.setOnClickListener {
