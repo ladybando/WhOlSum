@@ -19,14 +19,22 @@ class RegistrationFragment : Fragment() {
 //TODO add onclick listener to drawable https://stackoverflow.com/questions/33650575/click-listener-for-drawableleft-in-edittext-in-android
   /*
   fun showPassword(){
-    showHideBtn.setOnClickListener {
-        if(showHideBtn.text.toString().equals("Show")){
-            pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
-            showHideBtn.text = "Hide"
-        } else{
-            pwd.transformationMethod = PasswordTransformationMethod.getInstance()
-            showHideBtn.text = "Show"
+  val editText = binding.tvPassword
+    editText.setOnTouchListener(new OnTouchListener() {
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        final int DRAWABLE_LEFT = 0;
+        final int DRAWABLE_TOP = 1;
+        final int DRAWABLE_RIGHT = 2;
+        final int DRAWABLE_BOTTOM = 3;
+
+       if(event.getRawX() <= (editText.getCompoundDrawables()[DRAWABLE_LEFT].getBounds().width()))
+        {
+              // your action here
+             return true;
         }
-     }
+        return false;
+    }
+});
     }*/
 }
