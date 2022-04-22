@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.android.wholsum.ui.LoginFragment"
+        android:name="com.example.android.wholsum.login.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action

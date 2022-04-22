@@ -9,5 +9,8 @@
     <string name="username">Enter username</string>
     <string name="password">Enter password</string>
     <string name="submit">Submit</string>
-    <string name="your_web_client_id">test0189283</string>
+    <string name="your_web_client_id">"969078698525-nuihp645u9gb5shr5tavr4j7sh35u4pa.apps.googleusercontent.com"</string>
+    <string name="desc_firebase_lockup">firebase lockup</string>
+    <string name="first_name">Enter First Name</string>
+    <string name="last_name">Enter Last Name</string>
 </resources>
