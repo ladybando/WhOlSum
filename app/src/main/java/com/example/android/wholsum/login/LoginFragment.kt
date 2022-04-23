@@ -23,8 +23,7 @@ class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
-    //TODO ensure firebase works
-    //TODO create tests for firebase
+
     //TODO add database to store username,password info
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,15 +51,18 @@ class LoginFragment : Fragment() {
 
     fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
         val response = result.idpResponse
+        Log.d("LoginFragResponse", "$response")
         if (result.resultCode == Activity.RESULT_OK) {
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
+            Log.d("LoginFragUser", "$user")
             // ...
         } else {
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
             // response.getError().getErrorCode() and handle the error.
             // ...
+            Log.d("LoginFragError", "$response.error.errorCode")
         }
     }
     private val signInLauncher = registerForActivityResult(
@@ -97,6 +99,7 @@ class LoginFragment : Fragment() {
                     Log.w("LoginFrag", "createUserWithEmail:failure", task.exception)
                     Snackbar.make(binding.tvPassword, "Authentication failed.",
                         Snackbar.LENGTH_SHORT).show()
+                    createSignInIntent()
                     //   allow to resign in
                 }
             }
